@@ -1,7 +1,7 @@
 {
-  "name": "Home Controls",
+  "name": "Home Commander",
   "version": "1.0.0",
-  "description": "Home automation interface",
+  "description": "Home automation interface (Blue Iris, Hue)",
   "main": "defaults.js",
   "repositry": {
     "type": "git",
