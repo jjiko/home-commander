@@ -1,6 +1,6 @@
 {
-    "name": "jjiko/iris",
-    "description": "blueiris custom web ui",
+    "name": "jjiko/home-commander",
+    "description": "Home automation interface (Blue Iris, Hue)",
     "license": "MIT",
     "authors": [
         {
@@ -9,11 +9,11 @@
         }
     ],
     "require": {
-        "php": ">=5.5.9"
+        "php": ">=7.1.0"
     },
     "autoload": {
         "psr-4": {
-            "Jiko\\Iris\\": "src/"
+            "Jiko\\Home\\": "src/"
         }
     }
 }

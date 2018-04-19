@@ -1,6 +1,6 @@
-<div id="blueiris">
-    <div id="blueirisHeader">
-        <h1>BlueIris Console</h1>
+<div id="home">
+    <div id="homeHeader">
+        <h1>Home Console</h1>
         <div id="system"></div>
         <div id="status" data-role="status" data-status="?" class="display-debug">
             <div id="home"></div>
@@ -33,13 +33,13 @@
     </div>
 </div>
 
-@section('scripts.footer')
+@push('scripts.footer')
     <script>
-        window.blueiris = {!! $data !!};
+        window.home = {!! $data !!};
     </script>
-@stop
+@endpush
 
 @section('styles')
     @parent
-    <link rel="stylesheet" href="/css/components/blueiris-console.css">
+    <link rel="stylesheet" href="/css/components/home-console.css">
 @stop

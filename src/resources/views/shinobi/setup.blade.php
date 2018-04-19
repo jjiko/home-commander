@@ -1,5 +1,5 @@
-<h1>BlueIris Setup</h1>
-<form data-role="auth.blueiris.form" action="{{ route("auth.connect.handler", ["provider" => "blueiris"]) }}"
+<h1>shinobi Setup</h1>
+<form data-role="auth.shinobi.form" action="{{ route("auth.connect.handler", ["provider" => "shinobi"]) }}"
       method="post">
     <input type="hidden" name="session">
     <input type="hidden" name="system">
@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="form-group col-md-8">
                     <label for="LAN">Local IP</label>
-                    <input data-role="auth.blueiris.endpoint" list="localAddresses" name="lan" id="LAN"
+                    <input data-role="auth.shinobi.endpoint" list="localAddresses" name="lan" id="LAN"
                            class="form-control">
                     <datalist id="localAddresses">
                         <option value="Loading your local IPs&hellip;"></option>
@@ -16,7 +16,7 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="lan_port">Port</label>
-                    <input data-role="auth.blueiris.port" id="lan_port" name="lan_port" class="form-control" type="text"
+                    <input data-role="auth.shinobi.port" id="lan_port" name="lan_port" class="form-control" type="text"
                            value="81">
                 </div>
             </div>
@@ -40,19 +40,19 @@
         <div class="col-md-6">
             <div class="row">
                 <div class="form-group col-md-12">
-                    <label for="BlueIrisUsername">Username</label>
-                    <input autocomplete="off" data-role="auth.blueiris.username" id="BlueIrisUsername" name="username"
+                    <label for="shinobiUsername">Username</label>
+                    <input autocomplete="off" data-role="auth.shinobi.username" id="shinobiUsername" name="username"
                            class="form-control" type="text">
                 </div>
                 <div class="form-group col-md-12">
-                    <label for="BlueIrisPassword">Password</label>
-                    <input autocomplete="off" data-role="auth.blueiris.password" id="BlueIrisPassword" name="password"
+                    <label for="shinobiPassword">Password</label>
+                    <input autocomplete="off" data-role="auth.shinobi.password" id="shinobiPassword" name="password"
                            class="form-control" type="password">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <a class="btn btn-default" data-role="auth.blueiris.setup">Login</a>
+                    <a class="btn btn-default" data-role="auth.shinobi.setup">Login</a>
                 </div>
             </div>
         </div>

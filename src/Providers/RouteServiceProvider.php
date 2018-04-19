@@ -1,11 +1,11 @@
-<?php namespace Jiko\Iris\Providers;
+<?php namespace Jiko\Home\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Routing\Router;
 
 class RouteServiceProvider extends ServiceProvider
 {
-  protected $namespace = 'Jiko\Iris\Http\Controllers';
+  protected $namespace = 'Jiko\Home\Http\Controllers';
 
   public function map(Router $router)
   {

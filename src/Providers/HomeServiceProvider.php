@@ -1,10 +1,10 @@
 <?php
 
-namespace Jiko\Iris\Providers;
+namespace Jiko\Home\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
-class IrisServiceProvider extends ServiceProvider
+class HomeServiceProvider extends ServiceProvider
 {
   protected $hostArray = [];
 
@@ -15,11 +15,11 @@ class IrisServiceProvider extends ServiceProvider
 //    $this->hostArray = ['iris.joejiko.com', 'local-iris.joejiko.com'];
 //    if (in_array(Input::server('HTTP_HOST'), $this->hostArray)) {
 //    }
-    view()->addNamespace('iris', __DIR__ . '/../resources/views');
+    view()->addNamespace('home', __DIR__ . '/../resources/views');
   }
 
   public function register()
   {
-    $this->app->register('Jiko\Iris\Providers\RouteServiceProvider');
+    $this->app->register('Jiko\Home\Providers\RouteServiceProvider');
   }
 }
