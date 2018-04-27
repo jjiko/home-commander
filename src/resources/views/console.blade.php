@@ -6,6 +6,10 @@
             <div id="home"></div>
             <div id="away"></div>
         </div>
+        <div id="controls" data-role="controls">
+            <button class="btn btn-warning">Restart all cameras</button>
+            <a class="btn btn-primary" href="/admin/home/map-to-nest">Map Nest cameras</a>
+        </div>
     </div>
     <div id="screens">
         <div id="overview" data-role="overview">
