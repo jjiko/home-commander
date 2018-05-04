@@ -12,6 +12,11 @@ class HomeServiceProvider extends ServiceProvider
   {
     parent::boot();
 
+    if ($this->app->runningInConsole()) {
+      $this->commands([
+
+      ]);
+    }
 //    $this->hostArray = ['iris.joejiko.com', 'local-iris.joejiko.com'];
 //    if (in_array(Input::server('HTTP_HOST'), $this->hostArray)) {
 //    }

@@ -31,8 +31,20 @@ class BlueIrisPageController extends BaseController
 
   public function console()
   {
+    if (auth()->guest()) return redirect('/user');
     view()->share('config', ['app.class' => 'no-branding', 'main.class' => 'no-menu no-sidebar']);
-    $this->setContent('home::console', ['data' => request()->user()->blueiris->connection]);
+    $blueiris = request()->user()->blueiris->connection;
+    $viewData = ['data' => $blueiris];
+
+    if($nest = request()->user()->nest) {
+      $viewData['nest'] = $nest->data;
+    }
+
+    if($eight = request()->user()->eight) {
+      $viewData['eight'] = $eight->data;
+    }
+
+    $this->setContent('home::console', $viewData);
   }
 
   public function guest()

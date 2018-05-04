@@ -1,6 +1,45 @@
 <div id="home">
     <div id="homeHeader">
         <h1>Home Console</h1>
+        @if($eight || $nest)
+            <div class="row">
+                @if($nest)
+                    <div class="col-xs-6">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <img class="img-responsive" src="//cdn.joejiko.com/img/vendor/nest/nest_logo.png">
+                            </div>
+                            <div class="col-xs-10">
+                                @foreach($nest->structures as $id => $structure)
+                                    {{ $structure->name }}
+                                    Status: <button class="btn">{{ $structure->away }}</button>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                @endif
+                @if($eight)
+                    <div class="col-xs-6">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <img class="img-responsive" src="//cdn.joejiko.com/img/vendor/eight/EightLogo.png">
+                            </div>
+                            <div class="col-xs-10">
+                                @foreach($eight as $device)
+                                    Left side heating:
+                                    <button class="btn">{{ $device->leftNowHeating ? "on" : "off" }}</button>
+                                    Right side heating:
+                                    <button class="btn">{{ $device->rightNowHeating ? "on": "off" }}</button><br>
+                                    Status: {{ $device->online ? "online" : "offline" }} Last
+                                    Heard: {{ $device->lastHeard }}
+                                    LED: {{ $device->ledBrightnessLevel }}
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                @endif
+            </div>
+        @endif
         <div id="system"></div>
         <div id="status" data-role="status" data-status="?" class="display-debug">
             <div id="home"></div>
